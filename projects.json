@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Mini-projet HTML/CSS",
+    "category": "web",
+    "description": "Une page web moderne realisee en HTML et CSS avec un en-tete, une navigation, une section principale, une image, une video, une sidebar et un footer.",
+    "techs": ["HTML", "CSS"]
+  },
+  {
+    "id": 2,
+    "title": "Portfolio AymanCore",
+    "category": "web",
+    "description": "Un portfolio personnel responsive pour presenter mon profil, mes competences, mes projets et un formulaire de contact.",
+    "techs": ["HTML", "CSS", "JavaScript"]
+  }
+]

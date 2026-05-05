@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio dynamique</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a class="logo" href="#accueil" aria-label="Accueil">
+        <img src="logo-ac.png" alt="Logo AC">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Etudiant en genie informatique</p>
+        <h1>Bonjour, je suis <span>Ayman Akdaich</span>.</h1>
+        <div class="hero-actions">
+          <a class="button primary" href="#projets">Voir mes projets</a>
+          <a class="button secondary" href="#contact">Me contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil" class="section two-columns">
+      <div>
+        <p class="eyebrow">A propos</p>
+        <h2>A propos de moi</h2>
+        <p>
+          Je suis Ayman, etudiant en Genie Informatique a l'EST. Je cree des
+          projets web modernes et pratiques pour developper mes competences en
+          HTML, CSS et developpement informatique. J'ameliore progressivement mes
+          competences en informatique, en developpement web et en design.
+        </p>
+      </div>
+      <div class="skills-panel">
+        <h3>Competences</h3>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive</span>
+          <span>C</span>
+          <span>Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Realisations</p>
+          <h2>Mes projets</h2>
+        </div>
+        <div class="filters" aria-label="Filtres des projets">
+          <button class="filter active" type="button" data-filter="all">Tous</button>
+          <button class="filter" type="button" data-filter="web">Web</button>
+          <button class="filter" type="button" data-filter="app">App</button>
+          <button class="filter" type="button" data-filter="api">API</button>
+        </div>
+      </div>
+      <p id="projects-status" class="status">Chargement des projets...</p>
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <section id="contact" class="section two-columns">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Travaillons ensemble</h2>
+        <p>
+          Le formulaire ci-dessous simule l'envoi d'un message. Il montre la
+          gestion des evenements, la validation et un retour utilisateur.
+        </p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label>
+          Nom
+          <input type="text" name="name" placeholder="Votre nom" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="votre@email.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Envoyer</button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fermer">x</button>
+      <p id="modal-category" class="eyebrow"></p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <ul id="modal-techs"></ul>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; AymanCore</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
